@@ -4,6 +4,9 @@ use anchor_spl::token_interface::{Mint, TokenInterface};
 use crate::state::marketplace::Marketplace;
 
 #[derive(Accounts)]
+// In the lesson 1:11:43
+// Remove instruction name data and change `name.as_str()` for the marketplace seeds
+// with "marketplace.name.as_str()" but doesn't compile for me ?
 #[instruction(name: String)]
 pub struct Initialize<'info> {
     #[account(mut)]
